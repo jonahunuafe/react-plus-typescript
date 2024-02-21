@@ -19,13 +19,9 @@ isInstructor = true;
 
 //More complex types
 
-
-
-
 let hobbies: string[];
 
 hobbies = ['Sports', 'Cooking'];
-
 
 let person: {
     name: string,
@@ -51,3 +47,9 @@ let people: {
 let course = 'React - A Powerful Tool';
 
 //course = 12345;
+
+//Union types
+
+let courses: string | number = 'React - A Powerful Tool';
+
+courses = 12345;
