@@ -45,3 +45,9 @@ let people: {
     name: string,
     age: number,
 }[];
+
+//Type inference
+
+let course = 'React - A Powerful Tool';
+
+//course = 12345;
