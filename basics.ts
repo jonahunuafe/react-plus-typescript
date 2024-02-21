@@ -52,3 +52,13 @@ let course = 'React - A Powerful Tool';
 let courses: string | number = 'React - A Powerful Tool';
 
 courses = 12345;
+
+//Functions and types
+
+function add(a: number, b: number) {
+    return a + b;
+}
+
+function printOutput(value: any) {
+    console.log(value);
+}
