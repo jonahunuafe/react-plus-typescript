@@ -1,8 +1,16 @@
+// The syntax for typescript let variablename: type = value;
 
 // this is a tuple. Its good you only make it two. It takes care of order
 let user: [number, string] = [1, "Jonah"]; 
-const enum Size { Small = "s", Medium = "m", Large =" l" }
+// enum is useful when you have a handfull of options
+const enum Size { 
+    Small = "s",
+    Medium = "m", 
+    Large =" l" 
+}
+
 let mySize: Size = Size.Medium;
+const small = Size.Small;
 console.log(mySize);
 
 // the :number outside the bracket meaans you are returning a number.
