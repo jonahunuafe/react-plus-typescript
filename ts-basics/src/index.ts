@@ -154,4 +154,16 @@ const jonah: Admin = {
     }
 }
 
+// creating class in js using ts
+class Person {
+    email: string
+    name: string
+    constructor(email: string, name: string) {
+        this.email = email;
+        this.name = name
+    }
+}
+
+const hitesh = new Person("h@gmail.com", "john")
+
 

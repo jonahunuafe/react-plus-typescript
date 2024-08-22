@@ -70,4 +70,11 @@ const jonah = {
         return 10;
     }
 };
+class Person {
+    constructor(email, name) {
+        this.email = email;
+        this.name = name;
+    }
+}
+const hitesh = new Person("h@gmail.com", "john");
 //# sourceMappingURL=index.js.map
