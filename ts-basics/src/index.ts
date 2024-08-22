@@ -165,8 +165,10 @@ const jonah: Admin = {
 //     }
 // }
 
+// private can be access within the class not outside the class
+
 class Person {
-    private _courseCount = 1
+    protected _courseCount = 1
 
     readonly city: string = "Jaipur"
     constructor(
@@ -174,7 +176,7 @@ class Person {
     ) {
 
     }
-    
+
     private deleteToken() {
         console.log("Token deleted");
     }
@@ -195,6 +197,51 @@ class Person {
     }
 }
 
+class SubPerson extends Person {
+    isFamily: boolean = true;
+    changeCourseCount() {
+        this._courseCount = 4
+    }
+}
+
 const hitesh = new Person("h@gmail.com", "john")
+
+
+interface TakePhoto {
+    cameraMode: string
+    filter: string
+    burst: number
+}
+
+interface Story {
+    createStory(): void
+}
+
+// You can only use the keyword implements for interface
+
+class Instagram implements TakePhoto {
+    constructor(
+        public cameraMode: string,
+        public filter: string,
+        public burst: number
+    ) {
+
+    }
+}
+
+class Youtube implements TakePhoto, Story {
+    constructor(
+        public cameraMode: string,
+        public filter: string,
+        public burst: number,
+        public short: string
+    ) {
+
+    }
+
+    createStory(): void {
+        console.log("Story was created")
+    }
+}
 
 
