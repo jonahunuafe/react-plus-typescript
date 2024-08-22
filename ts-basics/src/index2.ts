@@ -28,5 +28,27 @@ class Tiktok extends TakePhoto {
 
 // You cannot create object from the abstract class, you can only create object from the class which 
 // is inheriting it.
-const hc = new Tiktok("test", "Test", 3)
+const hc = new Tiktok("test", "Test", 3);
 hc.getReelTime();
+
+
+// Generics
+const score: Array<number> = []
+const names: Array<string> = []
+
+function identityOne<Type>(val: Type): Type {
+    return val
+}
+
+identityOne(3)
+
+function identityTwo<T>(val: T): T {
+    return val
+}
+
+interface Bottle {
+    brand: string;
+    type: number
+}
+
+identityTwo<Bottle>({brand: "fanta", type: 3})
