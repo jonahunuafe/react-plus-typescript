@@ -149,7 +149,9 @@ const jonah: Admin = {
     startTrail: () => {
         return "trail started"
     },
-    getCoupon: (name: "Joe", off: 20) => {
+    getCoupon: () => {
         return 10
     }
 }
+
+
