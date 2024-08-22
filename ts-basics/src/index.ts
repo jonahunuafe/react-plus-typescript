@@ -27,7 +27,8 @@ function calculateTax(income: number): number {
 type Employee = {
     readonly id: number;
     name: string;
-    retire: (date: Date) => void;
+    // retire: (date: Date) => void; or
+    retire(date: Date): void;
     creditcardDetails?: number
 }
 
@@ -119,3 +120,36 @@ const data: number[] = [1, 2, 3]
 const data2: string[] = ["1", "2", "3"]
 const data3: (number | string)[] = [1, 2, "3"]
 
+// Interface means adding more values to the interface
+interface Users {
+    readonly dbId: number;
+    email: string;
+    userId: number;
+    googleId?: string;
+    startTrail(): string;
+    getCoupon(couponname: string, value: number): number
+}
+
+// reopening of the interface
+interface Users {
+    githubToken: string
+}
+
+// One advantage is inheritance
+interface Admin extends Users {
+    role: "admin" | "ta" | "learner"
+}
+
+// You can remove the Admin keyword and replace with Users. This will remove the inheritance.
+// When removing the Admin keyword, also rememebre to remove the role to avoid errors.
+const jonah: Admin = {
+    dbId: 22, email: "joe@gmail.com", userId: 2211,
+    role: "admin",
+    githubToken: "github",
+    startTrail: () => {
+        return "trail started"
+    },
+    getCoupon: (name: "Joe", off: 20) => {
+        return 10
+    }
+}
