@@ -52,3 +52,17 @@ interface Bottle {
 }
 
 identityTwo<Bottle>({brand: "fanta", type: 3})
+
+
+function getSearchProducts<T>(products: T[]): T {
+    //do some database operations
+    const myIndex = 3
+    return products[myIndex]
+}
+
+// Using arrow functions for generics
+const getMoreSearchProducts = <T,>(products: T[]): T => {
+    //do some database operations
+     const myIndex = 4
+    return products[myIndex]
+}
