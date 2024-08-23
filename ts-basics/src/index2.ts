@@ -112,7 +112,7 @@ function detectType(val: string | number) {
     return val + 3
 }
 
-
+// In narrowing
 interface Users {
     name: string,
     email: string
@@ -128,3 +128,15 @@ function isAdminAccount(account: User | Admin) {
         return account.isAdmin
     }
 }
+
+
+// instanceof narrowing
+function logValue(x: Date | string) {
+    if(x instanceof Date) {
+        console.log(x.toUTCString())
+    } else {
+        console.log(x.toUpperCase())
+    }
+}
+
+
