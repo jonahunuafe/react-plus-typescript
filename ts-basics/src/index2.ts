@@ -101,3 +101,15 @@ class Sellable<T> {
         this.cart.push(product)
     }
 }
+
+
+// Narrowing
+function detectType(val: string | number) {
+    if(typeof val === "string") {
+        return val.toLowerCase()
+    }
+
+    return val + 3
+}
+
+
