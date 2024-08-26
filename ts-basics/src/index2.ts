@@ -118,7 +118,7 @@ function detectType(val: string | number) {
     return val + 3
 }
 
-// In narrowing
+// "in" narrowing
 interface Users {
     name: string,
     email: string
