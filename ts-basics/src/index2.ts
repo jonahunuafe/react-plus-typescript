@@ -195,7 +195,11 @@ function getTrueShape(shape: Shape) {
         return Math.PI * shape.radius ** 2
     }
 
-    // return shape.side * shape.side
+    if(shape.kind === "rectangle") {
+        return shape.length ** 2
+    }
+
+    return shape.side * shape.side
 }
 
 // exhaustive checking
