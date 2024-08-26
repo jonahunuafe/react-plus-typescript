@@ -138,12 +138,12 @@ function isAdminAccount(account: Users | Admin) {
 }
 
 
-// instanceof narrowing
+// "instanceof" narrowing
 function logValue(x: Date | string) {
     if(x instanceof Date) {
         console.log(x.toUTCString())
     } else {
-        console.log(x.toUpperCase())
+        console.log(x.charAt(0).toUpperCase() + x.slice(1))
     }
 }
 
