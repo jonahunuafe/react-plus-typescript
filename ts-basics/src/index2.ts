@@ -80,7 +80,13 @@ function anotherFunction<T, U extends Database>(valueOne: T, valueTwo: U): objec
     }
 }
 
-anotherFunction(3, {})
+const sport: string = "soccer"
+
+anotherFunction("john", {
+    connection: sport,
+    username: "joe",
+    password: "123"
+})
 
 // creating a generic class
 interface Quiz {
@@ -119,11 +125,11 @@ interface Users {
 }
 
 interface Admin {
-     name: string,
+    name: string,
     email: string
 }
 
-function isAdminAccount(account: User | Admin) {
+function isAdminAccount(account: Users | Admin) {
     if ("isAdmin" in account) {
         return account.isAdmin
     }

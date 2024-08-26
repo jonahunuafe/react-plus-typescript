@@ -243,5 +243,3 @@ interface Story {
 //         console.log("Story was created")
 //     }
 // }
-
-
