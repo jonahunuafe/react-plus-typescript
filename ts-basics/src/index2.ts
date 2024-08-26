@@ -133,6 +133,8 @@ function isAdminAccount(account: Users | Admin) {
     if ("isAdmin" in account) {
         return account.isAdmin
     }
+
+    return
 }
 
 
