@@ -13,7 +13,7 @@ let mySize: Size = Size.Medium;
 const small = Size.Small;
 console.log(mySize);
 
-// the :number outside the bracket meaans you are returning a number.
+// the :number outside the bracket means you are returning a number.
 function calculateTax(income: number): number {
    if(income < 50_000)
     return income * 1.2;
@@ -121,7 +121,7 @@ const data2: string[] = ["1", "2", "3"]
 const data3: (number | string)[] = [1, 2, "3"]
 
 // Interface means adding more values to the interface
-interface Users {
+interface User_s {
     readonly dbId: number;
     email: string;
     userId: number;
@@ -131,19 +131,21 @@ interface Users {
 }
 
 // reopening of the interface
-interface Users {
+interface User_s {
     githubToken: string
 }
 
 // One advantage is inheritance
-interface Admin extends Users {
+interface AdminAccount extends User_s {
     role: "admin" | "ta" | "learner"
 }
 
 // You can remove the Admin keyword and replace with Users. This will remove the inheritance.
 // When removing the Admin keyword, also rememebre to remove the role to avoid errors.
-const jonah: Admin = {
-    dbId: 22, email: "joe@gmail.com", userId: 2211,
+const jonah: AdminAccount = {
+    dbId: 22, 
+    email: "joe@gmail.com", 
+    userId: 2211,
     role: "admin",
     githubToken: "github",
     startTrail: () => {
@@ -173,9 +175,7 @@ class Person {
     readonly city: string = "Jaipur"
     constructor(
         public email: string, public name: string
-    ) {
-
-    }
+    ) {}
 
     private deleteToken() {
         console.log("Token deleted");
