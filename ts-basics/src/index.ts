@@ -206,7 +206,6 @@ class SubPerson extends Person {
 
 const hitesh = new Person("h@gmail.com", "john")
 
-
 interface TakePhoto {
     cameraMode: string
     filter: string
