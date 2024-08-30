@@ -7,7 +7,7 @@ export interface Props {
     isMarried: boolean;
 }
 
-export const Person = (props: Props) => {
+export const User = (props: Props) => {
     const [personBio, setPersonBio] = useState<string | null>("")
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
