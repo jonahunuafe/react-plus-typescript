@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Person } from "./components/Person"
 
 import NewTodo from './components/NewTodo';
 import Todos from './components/Todos';
@@ -25,6 +26,11 @@ function App() {
     <div>
       <NewTodo  onAddTodo={addTodoHandler} />
       <Todos items={todos} onRemoveTodo={removeTodoHandler} />
+      <Person
+        name={"Jonah"}
+        age={39}
+        isMarried={true}
+      />
     </div>
   );
 }
