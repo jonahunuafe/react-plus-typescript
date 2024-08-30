@@ -20,7 +20,7 @@ const contextInitialValues = {
     updateUser: () => null,
 }
 
-const UserContext = createContext<UserContextType>(contextInitialValues)
+export const UserContext = createContext<UserContextType>(contextInitialValues)
 
 interface Props {
     children: React.ReactNode
@@ -30,9 +30,10 @@ export const UserProvider = (props: Props) => {
     const [users, setUsers] = useState<User[] | null>(null)
 
     useEffect(() => {
-        // setUsers([{name: "Fejiro", age: 39, isMarried: true}])
+        setUsers([{name: "Fejiro", age: 39, isMarried: true}])
     }, [])
 
+    // Pass these as the values of the context provider
     const addUser =  (user: User) => null;
     const updateUser = (id: number) => null;
     const deleteUser = (id: number) => null;

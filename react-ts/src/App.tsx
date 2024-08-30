@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { User } from "./components/Person"
+import { User, Countries } from "./components/Person"
+import { UserProvider } from "./components/UserContextProvider"
 
 import NewTodo from './components/NewTodo';
 import Todos from './components/Todos';
@@ -28,11 +29,14 @@ function App() {
       <Todos items={todos} onRemoveTodo={removeTodoHandler} />
 
       {/* New Tutorial */}
-      <User
-        name={"Jonah"}
-        age={39}
-        isMarried={true}
-      />
+      <UserProvider>
+        <User
+          name={"Jonah"}
+          age={39}
+          isMarried={true}
+          country={Countries.Brazil}
+        />
+      </UserProvider>
     </div>
   );
 }
