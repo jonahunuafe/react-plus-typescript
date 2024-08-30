@@ -14,6 +14,10 @@ export const Person = (props: Props) => {
         setPersonBio(event.target.value)
     }
 
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault()
+    }
+
   return (
     <div>
         <p>{props.name}</p>
@@ -24,7 +28,9 @@ export const Person = (props: Props) => {
           {props.name} Bio: {!personBio ? "No Bio available" : personBio}
         </p>
 
-        <input onChange={handleChange} />
+        <form onSubmit={handleSubmit}>
+            <input onChange={handleChange} />
+        </form>
     </div>
   )
 }
